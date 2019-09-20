@@ -20,7 +20,7 @@
             <?php endif; ?>
         </div>
         <div class="info">
-          <a href="<?= base_url('user/profile') ?>" class="d-block"><?php echo ucwords($this->session->userdata('user_profile_name')) ?></a>
+          <a href="<?= base_url('4dmin/profile') ?>" class="d-block"><?php echo ucwords($this->session->userdata('user_profile_name')) ?></a>
         </div>
       </div>
       
@@ -49,7 +49,7 @@
                                     <i class="right fas fa-angle-left"></i>
                                   </p>
                                 </a>
-                                <ul class="nav nav-treeview">
+                                <ul class=" ml-4 nav nav-treeview">
                                   <?php
                                       print_menus( $data->branch );
                                   ?>

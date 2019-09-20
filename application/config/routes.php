@@ -55,3 +55,10 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin/menus/group'] = 'admin';
+
+//public
+$route['structure'] = 'home/structure';
+$route['contact']   = 'home/contact';
+$route['complaint']   = 'home/complaint';
+$route['article/(:any)'] = 'home/article/$1';
+// $route['admin'] = 'user';

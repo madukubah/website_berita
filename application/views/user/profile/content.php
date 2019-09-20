@@ -67,7 +67,7 @@
                     <div class=" col-md-12 ">
                         <div class="card">
                             <div class="card-body">
-                                <a href="<?php echo site_url('user/profile/edit') ?>" class="btn btn-block btn-md btn-primary waves-effect">Edit</a>
+                                <a href="<?php echo site_url('4dmin/profile/edit') ?>" class="btn btn-block btn-md btn-primary waves-effect">Edit</a>
                             </div> 
                         </div>
                     </div>

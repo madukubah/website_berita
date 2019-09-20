@@ -10,7 +10,7 @@ class User_services
 	protected $phone;
 	protected $address;
 	protected $email;
-  protected $group_id;
+  	protected $group_id;
   
   function __construct()
   {

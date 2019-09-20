@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Profile extends User_Controller {
 	private $services = null;
     private $name = null;
-    private $parent_page = 'user';
-	private $current_page = 'user/profile/';
+    private $parent_page = '4dmin';
+	private $current_page = '4dmin/profile/';
 
 	public function __construct(){
 		parent::__construct();
@@ -100,7 +100,7 @@ class Profile extends User_Controller {
 				{
 					redirect(site_url('auth/logout'));
 				}
-				redirect(site_url('user/profile'));
+				redirect(site_url('4dmin/profile'));
 			}
 			else
 			{

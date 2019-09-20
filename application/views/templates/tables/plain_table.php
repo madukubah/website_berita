@@ -57,6 +57,10 @@
                                                                 $value["data"] = $row;
                                                                 $this->load->view('templates/actions/modal_form', $value ); 
                                                             break;
+                                                        case "modal_form_multipart" :
+                                                                $value["data"] = $row;
+                                                                $this->load->view('templates/actions/modal_form_multipart', $value ); 
+                                                            break;
                                                         case "button_dropdowns" :
                                                                 $value["data"] = $row;
                                                                 $this->load->view('templates/actions/button_dropdown', $value ); 

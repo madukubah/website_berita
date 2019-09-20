@@ -32,7 +32,7 @@ class Auth extends Public_Controller
 
                                 if( $this->ion_auth->is_admin()) redirect(site_url('/admin'));
 
-                                redirect( site_url('/user') , 'refresh'); // use redirects instead of loading views for compatibility with MY_Controller libraries
+                                redirect( site_url('4dmin/') , 'refresh'); // use redirects instead of loading views for compatibility with MY_Controller libraries
                         }
                         else
                         {
@@ -47,7 +47,7 @@ class Auth extends Public_Controller
                 }else{
                         $this->data['message'] = (validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message')));
                         if(  validation_errors() || $this->ion_auth->errors() ) $this->session->set_flashdata('alert', $this->alert->set_alert( Alert::DANGER, $this->data['message'] ) );
-                        $this->render( "V_login_page" );
+                        $this->render( "V_login_page", NULL );
                 }
         }
     

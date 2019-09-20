@@ -1,119 +1,67 @@
-<?php
-  $menus = array(
-    array(
-      'menuId' => "home",
-      'menuName' => "Beranda",
-      'menuPath' => site_url("user/"),
-      'menuIcon' => "fa fa-file-archive-o",
-      'menuChild' => array()
-    ),
-    array(
-      'menuId' => "book",
-      'menuName' => "Daftar Buku",
-      'menuPath' => site_url("user/book"),
-      'menuIcon' => "fa fa-book",
-      'menuChild' => array()
-    ),
-    array(
-      'menuId' => "book",
-      'menuName' => "Tambah Buku",
-      'menuPath' => site_url("user/book/add"),
-      'menuIcon' => "fa fa-book",
-      'menuChild' => array()
-    ),
-  );
+<div class="col-lg-3">
+    <div class="sidebar">
+        <!-- Latest Posts -->
+        <div class="sidebar_latest">
+            <div class="sidebar_title">Latest Posts</div>
+            <div class="latest_posts">
+                <?php
+                    foreach( $latest_posts as $latest_post ):
+                ?>
+                    <!-- Latest Post -->
+                    <div class="latest_post d-flex flex-row align-items-start justify-content-start">
+                        <div><div class="latest_post_image"><img src="<?= $latest_post->images ?>" alt="https://unsplash.com/@anniespratt"></div></div>
+                        <div class="latest_post_content">
+                            <div class="post_category_small cat_video"><a href="#"><?= $latest_post->category_name ?></a></div>
+                            <div class="latest_post_title"><a href="<?= site_url("article/").$latest_post->file_content ?>"><?= $latest_post->title ?></a></div>
+                            <div class="latest_post_date"><?= date("d M Y", $latest_post->timestamp ) ?></div>
+                        </div>
+                    </div>
+                <?php
+                    endforeach;
+                ?>
+            </div>
+        </div>
 
-  $user_management = array(
-    'menuId' => "admin",
-    'menuName' => "User Management",
-    'menuPath' => site_url("admin/user_management"),
-    'menuIcon' => 'fa fa-times',
-    'menuChild' => array()
-  );
-  $category = array(
-    'menuId' => "category",
-    'menuName' => "Kategori",
-    'menuPath' => site_url("category"),
-    'menuIcon' => 'fa fa-times'
-  );
+        <!-- Most Viewed -->
 
-?>
-<aside class="main-sidebar">
-  <!-- sidebar: style can be found in sidebar.less -->
-  <section class="sidebar">
-    <!-- Sidebar user panel -->
-    <div class="user-panel">
-      <div class="pull-left image">
-          <img class="img-circle" src="<?php echo $a =  ( empty($this->session->userdata('user_image')) ) ?  base_url(FAVICON_IMAGE)  : base_url('uploads/users_photo/').$this->session->userdata('user_image') ?>" alt="Jason's Photo" />
-      </div>
-      <div class="pull-left info">
-        <?php echo $this->session->userdata('user_name')?>
-      </div>
-    </div>
-    <!-- /.search form -->
-    <!-- sidebar menu: : style can be found in sidebar.less -->
-    <ul class="sidebar-menu" data-widget="tree">
-      <li class="header">MENU</li>
-      <?php
-        foreach($menus as $menu):
-      ?>
-        <li id="<?php echo $menu['menuId'] ?>">
-          <a href="<?php echo $menu['menuPath'] ?>">
-          <i class="menu-icon <?php echo $menu['menuIcon'] ?>"></i>
-          <span class="menu-text"> <?php echo $menu['menuName'] ?> </span>
-          </a>
-          <b class="arrow"></b>
-        </li>
-      <?php
-          endforeach;
-      ?>
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-share"></i> <span>Multilevel</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu" style="display: none;">
-          <li class="treeview menu-open">
-            <a href="#"><i class="fa fa-circle-o"></i> Level One
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+        <div class="most_viewed">
+            <div class="sidebar_title">Most Viewed</div>
+            <div class="most_viewed_items">
+                <?php
+                    $no = 1;
+                    foreach( $most_vieweds as $most_viewed ):
+                ?>
+                     <!-- Most Viewed Item -->
+                    <div class="most_viewed_item d-flex flex-row align-items-start justify-content-start">
+                        <div><div class="most_viewed_num"><?=  str_pad( $no ,2 ,"0", STR_PAD_LEFT ); ?>.</div></div>
+                        <div class="most_viewed_content">
+                            <div class="post_category_small cat_video"><a href=""><?= $most_viewed->category_name ?></a></div>
+                            <div class="most_viewed_title"><a href="<?= site_url("article/").$most_viewed->file_content ?>"><?= $most_viewed->title ?></a></div>
+                            <div class="most_viewed_date"><a href="#"><?= date("d M Y", $most_viewed->timestamp ) ?></a></div>
+                        </div>
+                    </div>
+                <?php
+                    $no++;
+                    endforeach;
+                ?>
+
+            </div>
+        </div>
+
+        
+        <!-- <div class="sidebar_extra">
+            <a href="#">
+                <div class="sidebar_title">Advertisement</div>
+                <div class="sidebar_extra_container">
+                    <div class="background_image" style="background-image:url(<?= base_url('front-assets/') ?>images/extra_1.jpg)"></div>
+                    <div class="sidebar_extra_content">
+                        <div class="sidebar_extra_title">30%</div>
+                        <div class="sidebar_extra_title">off</div>
+                        <div class="sidebar_extra_subtitle">Buy online now</div>
+                    </div>
+                </div>
             </a>
-            <ul class="treeview-menu" style="display: block;">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-              <li class="treeview menu-open">
-                <a href="#"><i class="fa fa-circle-o"></i> Level Two
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
-                </a>
-                <ul class="treeview-menu" style="display: block;">
-                  <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                  <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-  <!-- /.sidebar -->
-</aside>
-<script type="text/javascript">
-    function menuActive( id ){
-        // var a =document.getElementById("menu").children[num-1].className="active";
-        if( id == "" )
-          var a =document.getElementById("home").className="active";
-        else
-          var a =document.getElementById(id).className="active";
-        console.log(a);
-    }
-</script>
+        </div> -->
 
-
-
-
+    </div>
+</div>
