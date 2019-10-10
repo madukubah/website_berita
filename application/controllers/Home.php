@@ -20,7 +20,7 @@ class Home extends Public_Controller {
 		$this->data["right_bar"]['most_vieweds'] = $this->news_model->most_viewed( 0, 3 )->result();
 		
 	}
-	public function index()
+	public function index(  )
 	{
 		// 
 		$page = ($this->uri->segment(4 - 1  )) ? ($this->uri->segment( 4 - 1 ) - 1) : 0;

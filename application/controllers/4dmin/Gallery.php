@@ -14,7 +14,6 @@ class Gallery extends User_Controller {
 		$this->load->model(array(
 			'gallery_model',
 		));
-
 	}
 	public function index()
 	{

@@ -15,7 +15,7 @@ class Complaint extends User_Controller {
 			'complaint_model',
 		));
 	}
-	public function index()
+	public function index(  )
 	{
 		$page = ($this->uri->segment(4)) ? ($this->uri->segment(4) -  1 ) : 0;
 		// echo $page; return;
@@ -29,7 +29,7 @@ class Complaint extends User_Controller {
 		if ($pagination['total_records'] > 0 ) $this->data['pagination_links'] = $this->setPagination($pagination);
 		#################################################################3
 		$table = $this->services->get_table_config( $this->current_page );
-		$table[ "rows" ] = $this->complaint_model->complaint()->result();
+		$table[ "rows" ] = $this->complaint_model->complaints()->result();
 
 		$table = $this->load->view('templates/tables/plain_table_image', $table, true);
 		$this->data[ "contents" ] = $table;

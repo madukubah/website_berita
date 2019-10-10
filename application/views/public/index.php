@@ -38,25 +38,7 @@
 
 	<!-- Intro -->
 
-	<div class="intro">
-		<div class="container">
-			<div class="row">
-				<?php
-					foreach( $caretakers as $caretaker ):
-				?>
-					<!-- Intro Item -->
-					<div class="col-md-4 intro_col">
-						<div class="intro_item">
-							<img src="<?= $caretaker->images ?>" alt="">
-							<center><h4><b><?= $caretaker->description ?></b></h4></center>
-						</div>
-					</div>
-				<?php
-					endforeach;
-				?>
-			</div>
-		</div>
-	</div>
+	
 
 	<!-- Content Container -->
 	<!-- <div class="header_extra ml-auto d-flex flex-row align-items-center justify-content-start" style="position: absolute;right: 560px; top: 1670px">
@@ -142,4 +124,23 @@
 				<!--  -->
 			</div>
 		</div>
+
+		<div class="intro">
+		<div class="container">
+			<div class="row">
+				<?php
+					foreach( $caretakers as $caretaker ):
+				?>
+					<div class="col-md-3 intro_col">
+						<div class="intro_item">
+							<img src="<?= $caretaker->images ?>" alt="">
+							<center><h4><b><?= $caretaker->description ?></b></h4></center>
+						</div>
+					</div>
+				<?php
+					endforeach;
+				?>
+			</div>
+		</div>
+	</div>
 	</div>

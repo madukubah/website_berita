@@ -21,22 +21,22 @@ class Complaint_services
       );
       $table["number"] = $start_number;
       $table[ "action" ] = array(
-              array(
-                "name" => 'Edit',
-                "type" => "modal_form_multipart",
-                "modal_id" => "edit_",
-                "url" => site_url( $_page."edit/"),
-                "button_color" => "primary",
-                "param" => "id",
-                "form_data" => array(
-                    "id" => array(
-                        'type' => 'hidden',
-                        'label' => "id",
-                    ),
-                ),
-                "title" => "Group",
-                "data_name" => "name",
-              ),
+              // array(
+              //   "name" => 'Edit',
+              //   "type" => "modal_form_multipart",
+              //   "modal_id" => "edit_",
+              //   "url" => site_url( $_page."edit/"),
+              //   "button_color" => "primary",
+              //   "param" => "id",
+              //   "form_data" => array(
+              //       "id" => array(
+              //           'type' => 'hidden',
+              //           'label' => "id",
+              //       ),
+              //   ),
+              //   "title" => "Group",
+              //   "data_name" => "name",
+              // ),
               array(
                 "name" => 'X',
                 "type" => "modal_delete",
