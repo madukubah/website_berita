@@ -3,7 +3,7 @@
 <!-- Home -->
 
 	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="<?= base_url('front-assets/') ?>images/about.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="<?= base_url('front-assets/') ?>images/222.jpg" data-speed="0.8"></div>
 		<div class="home_content_container">
 			<div class="container">
 				<div class="row">

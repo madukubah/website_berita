@@ -6,24 +6,32 @@
 		<div class="header_content_container">
 			<div class="container">
 				<div class="row">
-					<div class="col">
-						<div class="header_content d-flex flex-row align-items-center justfy-content-start">
-							<div class="logo_container">
-								<a href="<?= base_url() ?>">
-									<div class="logo"><span>HMTI</span>UHO</div>
-									<div class="logo_sub">Himpunan Mahasiswa Teknik Informatika</div>
-								</a>
-							</div>
-							<!-- <div class="header_extra ml-auto d-flex flex-row align-items-center justify-content-start">
-								<a href="<?= base_url() ?>">
-									<div class="background_image" style="background-image:url(<?= base_url('front-assets/') ?>images/extra.jpg)"></div>
-									<div class="header_extra_content">
-										<div class="header_extra_title">save 50%</div>
-										<div class="header_extra_subtitle">Buy now in stores</div>
-									</div>
-								</a>
-							</div> -->
+					<div class="col-1" >
+						<div class="logohtmi"  >
+							<img src="<?= FAVICON_IMAGE ?>" width="100x" >
+							<!-- <img src="<?="";// base_url('front-assets/') ?>images/Logo.png" width="100x" > -->
 						</div>
+					</div>
+					<div class="col">
+							<!--  -->
+							<div style="margin-left:20px" class="header_content d-flex flex-row align-items-center justfy-content-start">
+								<div class="logo_container">
+									<a href="<?= base_url() ?>">
+										<div class="logo"><span>HMTI</span>UHO</div>
+										<div class="logo_sub">Himpunan Mahasiswa Teknik Informatika</div>
+									</a>
+								</div>
+								<!-- <div class="header_extra ml-auto d-flex flex-row align-items-center justify-content-start">
+									<a href="<?= base_url() ?>">
+										<div class="background_image" style="background-image:url(<?= base_url('front-assets/') ?>images/extra.jpg)"></div>
+										<div class="header_extra_content">
+											<div class="header_extra_title">save 50%</div>
+											<div class="header_extra_subtitle">Buy now in stores</div>
+										</div>
+									</a>
+								</div> -->
+							</div>
+						<!--  -->
 					</div>
 				</div>
 			</div>
@@ -48,7 +56,9 @@
 							<nav class="main_nav">
 								<ul class="main_nav_list d-flex flex-row align-items-center justify-content-start">
 									<li><a href="<?= base_url() ?>">home</a></li>
+									<li><a href="<?= base_url("visi_misi") ?>">Visi-Misi</a></li>
 									<li><a href="<?= base_url("structure") ?>">struktur organisasi</a></li>
+									<li><a href="<?= base_url("gallery") ?>">Galeri</a></li>
 									<li><a href="<?= base_url("contact") ?>">pengaduan</a></li>
 								</ul>
 							</nav>
@@ -87,7 +97,9 @@
 		<nav class="menu_nav">
 			<ul class="menu_mm">
 				<li><a href="<?= base_url() ?>">home</a></li>
-				<li><a href="<?= base_url("structure")?>">struktur organisasi</a></li>
+				<li><a href="<?= base_url("visi_misi") ?>">Visi-Misi</a></li>
+				<li><a href="<?= base_url("structure") ?>">struktur organisasi</a></li>
+				<li><a href="<?= base_url("gallery") ?>">Galeri</a></li>
 				<li><a href="<?= base_url("contact") ?>">pengaduan</a></li>
 			</ul>
 		</nav>

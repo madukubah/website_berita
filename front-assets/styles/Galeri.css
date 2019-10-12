@@ -1,0 +1,89 @@
+.text {
+	position: absolute;
+	top: 120px;
+	left: 15px;
+	color: white;
+}
+.text{
+	display: none;
+	  transition: all 0.35s ease-in-out;
+}
+.text:after {
+	display: none;
+	  transition: all 0.35s ease-in-out;
+}
+img:hover .text:hover{
+	display: block;
+}
+.contoh
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.contoh .box
+{
+	position: relative;
+/*	width: 265px;
+	height: 320px;*/
+	box-sizing: border-box;
+	display: inline-block;
+}
+.contoh .box .imgbox
+{
+	position: relative;
+	overflow: hidden;
+
+}
+.contoh .box .imgbox img
+{
+	max-width: 100%;
+	transition: transform 2s;
+}
+.contoh .box:hover .imgbox img
+{
+	transition: scale(1.2);
+}
+.contoh .box .detail
+{
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	background: rgba(0,0,0,0.7);
+	transform: scaleY(0);
+	transition: transform .5s;
+}
+.contoh .box:hover .detail
+{
+	transform: scaleY(1);
+}	
+.contoh .box .detail .content
+{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: -0px;
+	color: #fff;
+}
+.contoh .box .detail .content h2
+{
+	margin: 0;
+	padding: 0;
+	color: #ff0;
+}
+.contoh .box .detail .content p
+{
+	margin: 10px 0 0;
+	padding: 0;
+}
+.ba h4
+{
+	text-align: center;
+	background: black;
+	color: white;
+	
+	font-family: 'HelveticaNeueLTPro', sans-serif;
+}

@@ -64,6 +64,34 @@ body
 	background: #FFFFFF;
 	color: #000000;
 }
+
+.kiri{
+	width: 149px;
+	float: left;
+	background: black;
+	color: white;
+	padding: 20px 0 0 20px;
+	clear: both;
+}
+.kanan{
+	width: 991px;
+	float: right;
+	text-align: center;
+	clear: both;
+	background: black;
+}
+.gambar{
+	background: black;
+}
+.gambar img{
+	width: 100%;
+}
+.kanan iframe{
+	width: 991px;
+	height: 1010px;
+	background: black;
+}
+
 div
 {
 	display: block;
@@ -444,12 +472,17 @@ section
 {
 	display: block;
 }
+.logohtmi
+{
+	float: left;
+}
 .logo
 {
 	height: 53px;
 	font-size: 48px;
 	font-weight: bold;
 	color: #000000;
+	padding-left: 10px;
 	line-height: 53px;
 	text-transform: uppercase;
 }
@@ -467,8 +500,9 @@ section
 }
 .logo_sub
 {
+	padding-left: 10px;
 	font-size: 14px;
-	color: #aeaeae;
+	color: #000;
 	margin-top: 4px;
 }
 .header_extra
@@ -568,7 +602,7 @@ section
 }
 .main_nav_list li a:hover
 {
-	color: #61e49b;
+	color: #61e49b;;
 }
 .header_search_container
 {
@@ -759,7 +793,7 @@ section
 }
 .menu_close:hover div
 {
-	background: #61e49b;
+	background: rgb(171, 174, 22);
 }
 .menu .logo
 {
@@ -945,7 +979,6 @@ section
 {
 	color: #61e49b;
 }
-
 /*********************************
 5. Home
 *********************************/
@@ -962,7 +995,7 @@ section
 	left: 0;
 	width: 100%;
 	content: '';
-	background: rgba(98,70,147,0.7);
+	background: rgb(171, 174, 22);
 	z-index: 10;
 }
 .home::before
@@ -1016,7 +1049,6 @@ section
 {
 	color: #61e49b;
 }
-
 /*********************************
 6. Contact
 *********************************/
@@ -1024,9 +1056,10 @@ section
 .contact
 {
 	width: 100%;
+
 	background: #FFFFFF;
-	padding-top: 94px;
-	padding-bottom: 93px;
+		padding-top: 50px;
+		padding-bottom: 50px;
 }
 .contact_title
 {
@@ -1057,7 +1090,7 @@ section
 }
 .contact_social_list li:hover
 {
-	background: rgba(255,78,78,1);
+	background: rgb(0, 0, 0);
 }
 .contact_social_list li:hover a i
 {
@@ -1097,7 +1130,7 @@ section
 {
 	width: 49px;
 	height: 49px;
-	background: #624693;
+	background: #000;
 }
 .contact_info_icon
 {
@@ -1179,7 +1212,7 @@ section
 {
 	width: 136px;
 	height: 51px;
-	background: #61e49b;
+	background: #000;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -1191,7 +1224,7 @@ section
 }
 .contact_button:hover
 {
-	background: #624693;
+	background: rgb(171, 174, 22);
 }
 
 /*********************************
@@ -1202,7 +1235,6 @@ section
 {
 	padding-bottom: 93px;
 	background: #FFFFFF;
-	
 }
 .contact_map
 {
@@ -1263,7 +1295,7 @@ section
 }
 .footer_social_list li:hover
 {
-	background: rgba(255,78,78,1);
+	background: rgb(0, 0, 0);
 }
 .footer_social_list li:not(:last-child)
 {

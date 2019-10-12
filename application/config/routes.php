@@ -58,6 +58,8 @@ $route['admin/menus/group'] = 'admin';
 
 //public
 $route['structure'] = 'home/structure';
+$route['gallery'] = 'home/gallery';
+$route['visi_misi'] = 'home/visi_misi';
 $route['contact']   = 'home/contact';
 $route['complaint']   = 'home/complaint';
 $route['article/(:any)'] = 'home/article/$1';

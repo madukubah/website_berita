@@ -72,8 +72,10 @@ class News extends User_Controller {
 			// $a = file_get_contents($upload_path.$file_name);
 
 			// echo $a ;
-			$this->load->library('upload'); // Load librari upload
-			$config = $this->services->get_photo_upload_config( $data['title'] );
+			$this->load->library('upload');
+			$title = str_replace( ".", "_",   $data['title']  ); // Load librari upload
+			$title = str_replace( "/", "_",   $title  ); // Load librari upload
+			$config = $this->services->get_photo_upload_config( $title );
 
 			$this->upload->initialize( $config );
 			// echo var_dump( $_FILES ); return;
@@ -89,7 +91,8 @@ class News extends User_Controller {
 				redirect( site_url($this->current_page."create/")  );				
 			}
 			// buat content html
-			$config =  $this->services->get_file_upload_config( $data['title'] );
+			$config =  $this->services->get_file_upload_config( $title );
+			
 			if( file_put_contents( $config['upload_path'].$config['file_name'] , $this->input->post( 'summernote' ))  )
 			{
 				$data['file_content'] = $config['file_name'];
@@ -143,8 +146,10 @@ class News extends User_Controller {
 			// $a = file_get_contents($upload_path.$file_name);
 
 			// echo $a ;
-			$this->load->library('upload'); // Load librari upload
-			$config = $this->services->get_photo_upload_config( $data['title'] );
+			$this->load->library('upload');
+			$title = str_replace( ".", "_",   $data['title']  ); // Load librari upload
+			$title = str_replace( "/", "_",   $title  ); // Load librari upload
+			$config = $this->services->get_photo_upload_config( $title );
 
 			$this->upload->initialize( $config );
 			// echo var_dump( $_FILES ); return;
@@ -161,12 +166,12 @@ class News extends User_Controller {
 			}
 			// buat content html
 
-			$config =  $this->services->get_file_upload_config( $data['title'] );
+			$config =  $this->services->get_file_upload_config( $title );
 			if( file_put_contents( $config['upload_path'].$config['file_name'], $this->input->post( 'summernote' ))  )
 			{
 				$data['file_content'] = $config['file_name'];
 				if( $this->input->post( 'file_content' ) != "default.html" )
-				if( !@unlink( $config['upload_path'].$this->input->post( 'file_content' ) ) ) return;
+					if( !@unlink( $config['upload_path'].$this->input->post( 'file_content' ) ) ) return;
 			}
 			else
 			{

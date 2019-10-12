@@ -438,8 +438,7 @@ section
 .header_content
 {
 
-}
-.logo_container
+}.logo_container
 {
 	margin-top: 18px;
 }
@@ -447,12 +446,18 @@ section
 {
 	display: block;
 }
+.logohtmi
+{
+	
+	float: left!important;
+}
 .logo
 {
 	height: 53px;
 	font-size: 48px;
 	font-weight: bold;
 	color: #000000;
+	padding-left: 10px;
 	line-height: 53px;
 	text-transform: uppercase;
 }
@@ -470,6 +475,7 @@ section
 }
 .logo_sub
 {
+	padding-left: 10px;
 	font-size: 14px;
 	color: #000;
 	margin-top: 4px;

@@ -64,6 +64,33 @@ body
 	background: #FFFFFF;
 	color: #000000;
 }
+
+.kiri{
+	width: 149px;
+	float: left;
+	background: black;
+	color: white;
+	padding: 20px 0 0 20px;
+	clear: both;
+}
+.kanan{
+	width: 991px;
+	float: right;
+	text-align: center;
+	clear: both;
+}
+.gambar{
+	background: black;
+}
+.gambar img{
+	width: 100%;
+}
+.kanan iframe{
+	width: 991px;
+	height: 1010px;
+	background: black;
+}
+
 div
 {
 	display: block;
@@ -444,12 +471,17 @@ section
 {
 	display: block;
 }
+.logohtmi
+{
+	float: left;
+}
 .logo
 {
 	height: 53px;
 	font-size: 48px;
 	font-weight: bold;
 	color: #000000;
+	padding-left: 10px;
 	line-height: 53px;
 	text-transform: uppercase;
 }
@@ -467,6 +499,7 @@ section
 }
 .logo_sub
 {
+	padding-left: 10px;
 	font-size: 14px;
 	color: #000;
 	margin-top: 4px;
@@ -1024,7 +1057,10 @@ section
 .contact
 {
 	width: 100%;
+
 	background: #FFFFFF;
+	/*padding-top: 0px;
+	padding-bottom: 0px;*/
 	padding-top: 94px;
 	padding-bottom: 93px;
 }

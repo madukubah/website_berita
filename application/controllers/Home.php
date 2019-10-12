@@ -38,7 +38,7 @@ class Home extends Public_Controller {
 
 
 		$this->data['sliders'] = $this->gallery_model->galleries( 2 )->result();
-		$this->data['caretakers'] = $this->gallery_model->galleries( 5, 0, 3 )->result();
+		$this->data['caretakers'] = $this->gallery_model->galleries( 5, 0, 4 )->result();
 		// $this->data['newses'] = $this->news_model->newses( )->result();
 
 		// echo var_dump( $this->data['pagination_links'] );return;
@@ -56,6 +56,18 @@ class Home extends Public_Controller {
 		$this->data['structure'] = $this->gallery_model->galleries( 3 )->row();
 		// TODO : tampilkan landing page bagi user yang belum daftar
 		$this->render("public/Struktur");
+	}
+
+	public function gallery()
+	{
+		$this->data["galleries"] = $this->gallery_model->galleries( $IMAGE_TYPE = 1 )->result();
+		// TODO : tampilkan landing page bagi user yang belum daftar
+		$this->render("public/gallery");
+	}
+	public function visi_misi()
+	{
+		// TODO : tampilkan landing page bagi user yang belum daftar
+		$this->render("public/visi_misi");
 	}
 
 	public function article( $file )

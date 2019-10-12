@@ -91,7 +91,10 @@ class Caretaker extends User_Controller {
 			$data['type'] = $this->input->post( 'type' );
 
 			$this->load->library('upload'); // Load librari upload
-			$filename = "Gallery_".$data['name']."_".time();
+			$name = str_replace( ".", "_",$data['name'] );			
+			$filename = "Gallery_"."_".time();
+			// echo $filename;return;
+			$filename = "Gallery_".$name."_".time();
 			$upload_path = 'uploads/gallery/';
 
 			$config['upload_path'] = './'.$upload_path;
@@ -142,7 +145,9 @@ class Caretaker extends User_Controller {
 			$data['description'] = $this->input->post( 'description' );
 
 			$this->load->library('upload'); // Load librari upload
-			$filename = "Gallery_".$data['name']."_".time();
+			$name = str_replace( ".", "_",$data['name'] );
+			// $filename = "Gallery_"."_".time();
+			$filename = "Gallery_".$name."_".time();
 			$upload_path = 'uploads/gallery/';
 
 			$config['upload_path'] = './'.$upload_path;

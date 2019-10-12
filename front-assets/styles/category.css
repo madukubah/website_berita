@@ -444,12 +444,17 @@ section
 {
 	display: block;
 }
+.logohtmi
+{
+	float: left;
+}
 .logo
 {
 	height: 53px;
 	font-size: 48px;
 	font-weight: bold;
 	color: #000000;
+	padding-left: 10px;
 	line-height: 53px;
 	text-transform: uppercase;
 }
@@ -467,6 +472,7 @@ section
 }
 .logo_sub
 {
+	padding-left: 10px;
 	font-size: 14px;
 	color: #000;
 	margin-top: 4px;
@@ -496,6 +502,16 @@ section
 	margin-top: 7px;
 	padding-left: 1px;
 }
+.visi p{
+	color: 	black;
+}
+.misi p{
+	color: #000000;;
+}
+.misi ol {
+	list-style-position: inside;
+	
+} 
 .header_nav_container
 {
 	width: 100%;
